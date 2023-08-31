@@ -1,0 +1,14 @@
+public=$(curl -s ipinfo.io/ip)
+private=$(ifconfig wlan0 | grep broadcast | awk "{print $2}" | cut -c 14-28)
+router=$(ip route | grep default | cut -c 13-26)
+logo1=$(figlet -f slant -c "fsociety" | lolcat -f)
+logo2=$(figlet -f digital -c "Fuck The Society" | lolcat -f)
+echo "${logo1}"
+echo "${logo2}"
+echo "                                                                                                           "
+echo "  "                                                                                                         "                                                                                             "
+echo "              \e[0;31m         Public Ip:\e[0;32m ${public}                                                                "
+echo ""
+echo "             \e[0;31m         Private Ip: \e[0;32m${private}                                                             "
+echo ""
+echo "             \e[0;31m          Router Ip:\e[0;32m ${router}                                                               "
