@@ -4,10 +4,15 @@
 
 ```
   git clone https://github.com/kviraj572/ipinfo
+  cd ipinfo
+  chmod +x ipinfo
+  ./ipinfo
 ```
-```cd ipinfo
-```
+
 You can also use this as a command just add it to /usr/bin folder in linux
 
 converting it to command
+```
+  sudo mv ipinfo /usr/bin/
+```
 
